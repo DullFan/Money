@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.money.fragments.Home"
+        android:label="Home">
+        <action
+            android:id="@+id/action_home2_to_statistics"
+            app:destination="@id/statistics" />
+        <action
+            android:id="@+id/action_home2_to_setUp"
+            app:destination="@id/setUp" />
+        <action
+            android:id="@+id/action_home2_to_moneyPlus"
+            app:destination="@id/moneyPlus" />
+        <action
+            android:id="@+id/action_home2_to_refundInterface"
+            app:destination="@id/refundInterface" />
+        <action
+            android:id="@+id/action_home2_to_calendar"
+            app:destination="@id/calendar" />
+        <action
+            android:id="@+id/action_home2_to_monthlyReport"
+            app:destination="@id/monthlyReport" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/setUp"
+        android:name="com.example.money.fragments.SetUp"
+        android:label="SetUp" />
+    <fragment
+        android:id="@+id/moneyPlus"
+        android:name="com.example.money.fragments.MoneyPlus"
+        android:label="MoneyPlus">
+        <action
+            android:id="@+id/action_moneyPlus_to_signIn"
+            app:destination="@id/signIn" />
+        <action
+            android:id="@+id/action_moneyPlus_to_personalCenter"
+            app:destination="@id/personalCenter" />
+    </fragment>
+    <fragment
+        android:id="@+id/register"
+        android:name="com.example.money.fragments.Register"
+        android:label="Register" />
+    <fragment
+        android:id="@+id/signIn"
+        android:name="com.example.money.fragments.SignIn"
+        android:label="SignIn">
+        <action
+            android:id="@+id/action_signIn_to_register"
+            app:destination="@id/register" />
+        <action
+            android:id="@+id/action_signIn_to_forgetPassword"
+            app:destination="@id/forgetPassword" />
+    </fragment>
+    <fragment
+        android:id="@+id/personalCenter"
+        android:name="com.example.money.fragments.PersonalCenter"
+        android:label="PersonalCenter" />
+    <fragment
+        android:id="@+id/forgetPassword"
+        android:name="com.example.money.fragments.ForgetPassword"
+        android:label="ForgetPassword" />
+    <fragment
+        android:id="@+id/refundInterface"
+        android:name="com.example.money.fragments.RefundInterface"
+        android:label="RefundInterface" />
+    <fragment
+        android:id="@+id/calendar"
+        android:name="com.example.money.fragments.Calendar"
+        android:label="fragment_calendar"
+        tools:layout="@layout/fragment_calendar" />
+    <fragment
+        android:id="@+id/monthlyReport"
+        android:name="com.example.money.fragments.MonthlyReport"
+        android:label="fragment_monthly_report"
+        tools:layout="@layout/fragment_monthly_report" />
+</navigation>

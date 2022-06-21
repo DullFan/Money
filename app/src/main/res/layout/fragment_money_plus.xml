@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".fragments.MoneyPlus">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/money_back"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/purple_500"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/layout_back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:src="@drawable/cuo"
+                app:layout_constraintBottom_toBottomOf="@id/money_tablayout"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/money_tablayout" />
+
+            <TextView
+                app:layout_constraintTop_toTopOf="@+id/layout_back"
+                app:layout_constraintBottom_toBottomOf="@+id/layout_back"
+                app:layout_constraintLeft_toRightOf="@+id/layout_back"
+                android:text="修改"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:textSize="17dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_title"/>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/money_tablayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tabIndicatorColor="@color/white"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextColor="#E3E3E3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.6" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/money_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/money_back" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="20dp"
+            android:background="#f1f1f1f1"
+            app:layout_constraintBottom_toTopOf="@id/money_edittext" />
+
+        <EditText
+            android:id="@+id/money_edittext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:hint="点击输入备注..."
+            android:paddingBottom="15dp"
+            android:singleLine="true"
+            android:textColor="@color/purple_500"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toTopOf="@id/money_day"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/money_text" />
+
+        <TextView
+            android:id="@+id/money_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:paddingBottom="15dp"
+            android:singleLine="true"
+            android:text="0.0"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/money_edittext"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/money_edittext" />
+
+        <TextView
+            android:id="@+id/money_day"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/money_gridview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/money_text_back"
+            android:text="今天"
+            android:clickable="true"
+            android:textColor="@color/black"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"/>
+
+        <GridView
+            android:id="@+id/money_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="4"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

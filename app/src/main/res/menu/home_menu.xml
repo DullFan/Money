@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/statistics"
+        android:icon="@drawable/menu2"
+        android:title="报表统计" />
+
+    <item
+        android:id="@+id/setUp"
+        android:icon="@drawable/menu6"
+        android:title="设置·关于" />
+
+</menu>

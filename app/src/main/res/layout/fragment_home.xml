@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/home_drawerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+       <androidx.cardview.widget.CardView
+           android:id="@+id/home_asdasda"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+               <androidx.core.widget.NestedScrollView
+                   android:id="@+id/home_nested"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:fillViewport="true">
+
+                   <androidx.constraintlayout.widget.ConstraintLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:background="#F6F6F4">
+
+                       <ImageView
+                           android:id="@+id/home_img"
+                           android:layout_width="match_parent"
+                           android:layout_height="200dp"
+                           android:scaleType="centerCrop"
+                           android:src="@drawable/img1"
+                           app:layout_constraintTop_toTopOf="parent" />
+
+                       <LinearLayout
+                           android:id="@+id/home_layout2"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="10dp"
+                           android:orientation="vertical"
+                           android:paddingTop="70dp"
+                           app:layout_constraintTop_toTopOf="parent">
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginLeft="20dp"
+                               android:text="月支出"
+                               android:textColor="@color/white"
+                               android:textStyle="bold" />
+
+                           <TextView
+                               android:id="@+id/money_money1"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginLeft="20dp"
+                               android:text=""
+                               android:textColor="@color/white"
+                               android:textSize="40dp" />
+
+                           <LinearLayout
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:layout_marginTop="10dp"
+                               android:layout_marginBottom="20dp"
+                               android:orientation="horizontal">
+
+                               <TextView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:layout_marginLeft="20dp"
+                                   android:text="月收入"
+                                   android:textColor="@color/white"
+                                   android:textStyle="bold" />
+
+                               <TextView
+                                   android:id="@+id/money_money2"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:layout_marginLeft="5dp"
+                                   android:text=""
+                                   android:textColor="@color/white"
+                                   android:textStyle="bold" />
+
+                               <TextView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:layout_marginLeft="20dp"
+                                   android:text="本月结余"
+                                   android:textColor="@color/white"
+                                   android:textStyle="bold" />
+
+                               <TextView
+                                   android:id="@+id/money_money3"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:layout_marginLeft="5dp"
+                                   android:text=""
+                                   android:textColor="@color/white"
+                                   android:textStyle="bold" />
+                           </LinearLayout>
+                       </LinearLayout>
+
+                       <androidx.recyclerview.widget.RecyclerView
+                           android:id="@+id/home_recycler"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           app:layout_constraintTop_toBottomOf="@id/home_layout2" />
+                   </androidx.constraintlayout.widget.ConstraintLayout>
+               </androidx.core.widget.NestedScrollView>
+
+               <com.google.android.material.floatingactionbutton.FloatingActionButton
+                   android:id="@+id/home_floatingbutton"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginBottom="30dp"
+                   android:backgroundTint="?attr/colorPrimary"
+                   android:clickable="true"
+                   android:src="@drawable/jia"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintLeft_toLeftOf="parent"
+                   app:layout_constraintRight_toRightOf="parent"
+                   app:maxImageSize="24dp" />
+
+               <ImageView
+                   android:id="@+id/home_noData"
+                   android:layout_width="200dp"
+                   android:layout_height="200dp"
+                   android:src="@drawable/nodata"
+                   android:visibility="gone"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintLeft_toLeftOf="parent"
+                   app:layout_constraintRight_toRightOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:id="@+id/home_layout"
+                   android:layout_width="match_parent"
+                   android:layout_height="70dp"
+                   app:layout_constraintTop_toTopOf="parent">
+
+                   <ImageView
+                       android:id="@+id/home_menu"
+                       android:layout_width="25dp"
+                       android:layout_height="25dp"
+                       android:layout_marginLeft="20dp"
+                       android:layout_marginTop="30dp"
+                       android:src="@drawable/caidan"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintLeft_toLeftOf="parent"
+                       app:layout_constraintTop_toTopOf="parent" />
+
+                   <TextView
+                       android:id="@+id/home_year"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_centerInParent="true"
+                       android:layout_marginTop="30dp"
+                       android:clickable="true"
+                       android:text="2021.07"
+                       android:textColor="@color/white"
+                       android:textSize="16dp"
+                       android:textStyle="bold"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintLeft_toLeftOf="parent"
+                       app:layout_constraintRight_toRightOf="parent"
+                       app:layout_constraintTop_toTopOf="parent" />
+
+                   <ImageView
+                       android:id="@+id/home_calendar"
+                       android:layout_width="20dp"
+                       android:layout_height="20dp"
+                       android:layout_marginTop="30dp"
+                       android:layout_marginRight="20dp"
+                       android:src="@drawable/rili"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintRight_toLeftOf="@id/home_quanquan"
+                       app:layout_constraintTop_toTopOf="parent" />
+
+                   <ImageView
+                       android:id="@+id/home_quanquan"
+                       android:layout_width="20dp"
+                       android:layout_height="20dp"
+                       android:layout_marginTop="30dp"
+                       android:layout_marginRight="20dp"
+                       android:src="@drawable/quanquan"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintRight_toRightOf="parent"
+                       app:layout_constraintTop_toTopOf="parent" />
+               </androidx.constraintlayout.widget.ConstraintLayout>
+           </androidx.constraintlayout.widget.ConstraintLayout>
+
+       </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/home_navigation"
+            style="@style/Widget.MaterialComponents.NavigationView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:insetForeground="@android:color/transparent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/nav_header"
+            app:itemTextAppearance="@style/myNavigationDrawerStyle"
+            app:menu="@menu/home_menu" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</layout>
